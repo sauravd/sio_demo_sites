@@ -104,21 +104,4 @@ Open your browser:
   – Your browser must accept cookies. The setting is stored in a cookie.  
   – Try refreshing after switching; if issues persist, clear site cookies for localhost.
 
-8) Packing for sharing (optional)
----------------------------------
-If you later want to deliver a portable build:
-• Include the “media/” folder so all images referenced by the app are present.
-• You can run: python manage.py collectstatic (for production static if needed).  
-• A Docker image can be built once you’re happy with the local setup (out of scope for this user guide).
-
-Where things live (default Dev paths)
--------------------------------------
-• Project root:            sio_demo_sites/
-• App code:                sio_demo_sites/app/
-• Templates:               sio_demo_sites/app/templates/app/index.html
-• Static assets:           sio_demo_sites/app/static/app/
-• Uploaded/copied photos:  sio_demo_sites/media/photos/
-• Management importer:     sio_demo_sites/app/management/commands/import_sites_from_excel.py
-
 That’s it! Open the app, filter, and explore.
-
