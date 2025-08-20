@@ -1,0 +1,64 @@
+{% load static i18n %}
+<!doctype html>
+<html lang="{{ request.LANGUAGE_CODE|default:'en' }}"
+      dir="{% if request.LANGUAGE_CODE|slice:':2' == 'ar' %}rtl{% else %}ltr{% endif %}">
+<head class>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>{% trans "Saudi Irrigation Organiagtion Demo Sites" %}</title>
+
+  <link rel="stylesheet" href="{% static "app/app.css" %}"/>
+  <link rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin=""/>
+</head>
+<body>
+  <header class="hdr">
+    <div class="hdr-center">
+      <img class="logo" src="{% static "app/logo-left.svg" %}" alt="Logo" onerror="this.style.display='none'"/>
+      <strong class="title">{% trans "Saudi Irrigation Organiagtion Demo Sites" %}</strong>
+      <img class="logo" src="{% static "app/logo-right.jpg" %}" alt="Logo" onerror="this.style.display='none'"/>
+    </div>
+    <form class="lang" action="{% url "set_language" %}" method="post">
+      {% csrf_token %}
+      <input type="hidden" name="next" value="{{ request.path }}"/>
+      {% get_current_language as CURRENT_LANG %}
+      <select name="language" onchange="this.form.submit()">
+        <option value="en" {% if CURRENT_LANG|slice:":2" == "en" %}selected{% endif %}>{% trans "English" %}</option>
+        <option value="ar" {% if CURRENT_LANG|slice:":2" == "ar" %}selected{% endif %}>{% trans "العربية" %}</option>
+      </select>
+    </form>
+  </header>
+
+  <section class="filters">
+    <select id="filter-region"><option value="">{% trans "Region" %}</option></select>
+    <select id="filter-governorate"><option value="">{% trans "Governorate" %}</option></select>
+    <select id="filter-crop"><option value="">{% trans "Crop Type" %}</option></select>
+    <select id="filter-water"><option value="">{% trans "Water Source" %}</option></select>
+    <select id="filter-irr"><option value="">{% trans "Irrigation System Type" %}</option></select>
+    <input id="filter-farmer" type="search" placeholder="{% trans "Farmer Name" %}"/>
+    <button id="filter-clear" type="button">{% trans "Clear" %}</button>
+  </section>
+
+  <div id="map" role="region" aria-label="{% trans "Saudi Arabia map" %}"></div>
+
+  <!-- Labels for JS (used in popups) -->
+  <div id="i18n"
+       data-region="{% trans "Region" %}"
+       data-governorate="{% trans "Governorate" %}"
+       data-crop-type="{% trans "Crop Type" %}"
+       data-water-source="{% trans "Water Source" %}"
+       data-irr-type="{% trans "Irrigation System Type" %}"
+       data-du="{% trans "Distribution Uniformity" %}"
+       hidden></div>
+
+  <footer class="ftr">
+    <span>{% trans "Copyright Saudi Irrigation Organization" %} | {% now "Y" %}</span>
+  </footer>
+
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script defer src="{% static "app/app.js" %}"></script>
+</body>
+</html>

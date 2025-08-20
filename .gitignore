@@ -1,0 +1,34 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+*.pot
+*.pyc
+
+# Virtual env
+.venv/
+env/
+venv/
+
+# OS/editor cruft
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Node (if any)
+node_modules/
+
+# Local config & secrets
+.env
+*.env
+.env.*
+
+# Media & large local data (keep out of git; use LFS if you must)
+media/photos/
+data/
+uploads/
+
+# Compiled translations
+**/locale/**/LC_MESSAGES/*.mo

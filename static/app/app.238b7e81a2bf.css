@@ -1,0 +1,10 @@
+:root { --hdr: 60px; }
+body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+header { height: var(--hdr); display: flex; justify-content: space-between; align-items: center; padding: 8px 12px; border-bottom: 1px solid #ddd; }
+#map { height: calc(100vh - var(--hdr)); min-height: 300px; }
+.popup { max-width: 340px; }
+.meta { font-size: 13px; color: #333; margin-top: 6px; }
+.meta table { width: 100%; border-collapse: collapse; }
+.meta th, .meta td { padding: 2px 0; }
+.gallery { display: flex; gap: 6px; margin-top: 8px; overflow-x: auto; }
+.gallery img { height: 70px; border-radius: 6px; }

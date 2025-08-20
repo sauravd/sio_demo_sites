@@ -1,0 +1,64 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-19 11:47+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+#: app/templates/app/index.html:7 app/templates/app/index.html:19
+msgid "Saudi Irrigation Organiagtion Demo Sites"
+msgstr "مواقع تجريبية لهيئة الري السعودية"
+
+#: app/templates/app/index.html:33 app/templates/app/index.html:46
+msgid "Region"
+msgstr "منطقة"
+
+#: app/templates/app/index.html:34 app/templates/app/index.html:47
+msgid "Governorate"
+msgstr "محافظة"
+
+#: app/templates/app/index.html:35 app/templates/app/index.html:48
+msgid "Crop Type"
+msgstr "نوع المحصول"
+
+#: app/templates/app/index.html:36 app/templates/app/index.html:49
+msgid "Water Source"
+msgstr "مصدر المياه"
+
+#: app/templates/app/index.html:37 app/templates/app/index.html:50
+msgid "Irrigation System Type"
+msgstr "نوع نظام الري"
+
+#: app/templates/app/index.html:38
+msgid "Farmer Name"
+msgstr "اسم المزارع"
+
+#: app/templates/app/index.html:39
+msgid "Clear"
+msgstr "واضح"
+
+#: app/templates/app/index.html:42
+msgid "Saudi Arabia map"
+msgstr "خريطة المملكة العربية السعودية"
+
+#: app/templates/app/index.html:51
+msgid "Distribution Uniformity"
+msgstr "توحيد التوزيع"
+
+#: app/templates/app/index.html:55
+msgid "Copyright Saudi Irrigation Organization"
+msgstr "جميع الحقوق محفوظة للمؤسسة العامة للري"

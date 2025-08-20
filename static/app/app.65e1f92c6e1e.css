@@ -1,0 +1,117 @@
+:root{
+  --hdr: 64px;
+  --flt: 56px;
+  --ftr: 44px;
+  --brand: #02466b;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background:#fff;
+  color:#111;
+}
+
+/* Header */
+.hdr{
+  height:var(--hdr);
+  background:var(--brand);
+  color:#fff;
+  padding:8px 12px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.hdr-center{
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.hdr .title{
+  font-weight:700;
+  font-size:18px;
+  white-space:nowrap;
+}
+.hdr .logo{
+  height:40px;
+  width:auto;
+  display:block;
+}
+.hdr .lang select{
+  height:36px;
+  border-radius:6px;
+  border:1px solid rgba(255,255,255,.35);
+  background:#fff;
+  color:#111;
+  padding:0 10px;
+}
+
+/* Filters row */
+.filters{
+  height:var(--flt);
+  display:flex;
+  gap:8px;
+  align-items:center;
+  padding:8px 12px;
+  border-bottom:1px solid #e5e5e5;
+  background:#fafafa;
+}
+.filters select,
+.filters input[type="search"]{
+  height:36px;
+  min-width:140px;
+  padding:0 8px;
+}
+.filters button{
+  height:36px;
+  padding:0 14px;
+  border:1px solid #c8c8c8;
+  background:#fff;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* Map fills remaining viewport */
+#map{
+  height: calc(100vh - var(--hdr) - var(--flt) - var(--ftr));
+  min-height: 300px;
+}
+
+/* Popup */
+.popup .gallery{
+  margin-top:8px;
+  display:flex;
+  gap:6px;
+  overflow-x:auto;
+}
+.popup .gallery img{
+  height:70px;
+  border-radius:6px;
+}
+.popup .meta table{width:100%; border-collapse:collapse}
+.popup .meta th,
+.popup .meta td{padding:2px 0; text-align:left}
+[dir="rtl"] .popup .meta th,
+[dir="rtl"] .popup .meta td{text-align:right}
+
+/* Footer */
+.ftr{
+  height:var(--ftr);
+  background:var(--brand);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:0 12px;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .hdr .title{font-size:16px}
+  .filters{flex-wrap:wrap; height:auto}
+  #map{height: calc(100vh - var(--hdr) - var(--ftr) - 100px)}
+}
