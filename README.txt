@@ -121,4 +121,4 @@ Where things live (default Dev paths)
 • Management importer:     sio_demo_sites/app/management/commands/import_sites_from_excel.py
 
 That’s it! Open the app, filter, and explore.
-If you get stuck, share the terminal error text and a screenshot of the browser console (F12 → Console).
+
